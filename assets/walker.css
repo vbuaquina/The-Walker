@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    font-family: 'Bellota Text', cursive;
+}
+
+.overlay {  
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 500% 500%;
+    animation: gradient 15s ease infinite;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+h1 {
+    font-size: 8rem;
+    line-height: 1;
+}
+small {
+    color: black;
+    font-family: 'Clicker Script', cursive;
+}
+p {
+    font-size: 1.5rem;
+    margin-left: 4em;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.the-walker {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    z-index: 2;
+}
+.the-walker .text {
+    text-indent: -4em;
+    position: absolute;
+    transform: translate(140%, -220%);
+}
+.road {
+    border-bottom: 7px dashed black;
+}
+.runner {
+    background: url("../me-walking.png") no-repeat;
+    width: 180px;
+    height: 350px;
+    margin-left: 50px;
+}
+.walking {
+    animation: walk 1.2s steps(8) infinite;
+    /* forward 5s linear infinite; */
+}
+.walking-left {        
+    transform: scaleX(-1); 
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*Code below use for walking animation*/
+@keyframes walk {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: -1472px;
+    }
+}
+/* @keyframes forward {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+} */
