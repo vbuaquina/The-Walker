@@ -43,6 +43,7 @@ a {
 }
 
 .the-walker {
+    height: 100vh;
     width: 100%;
     position: fixed;
     bottom: 10px;
@@ -51,16 +52,26 @@ a {
 .the-walker .text {
     text-indent: -4em;
     position: absolute;
-    transform: translate(140%, -220%);
+    top: 10%;
+    right: 10%;
 }
 .road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     border-bottom: 7px dashed black;
+}
+.road p {
+    text-align: right;
+    padding-right: 2%;
 }
 .runner {
     background: url("../me-walking.png") no-repeat;
     width: 180px;
     height: 350px;
     margin-left: 50px;
+    position: absolute;
+    bottom: 0;
 }
 .walking {
     animation: walk 1.2s steps(8) infinite;
